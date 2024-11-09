@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Dos Estilos</title>
+    <script>
+    function ReEstilizar0() {
+        document.body.classList.remove("estilo1", "estilo2");
+    }
+    function ReEstilizar1() {
+        document.body.classList.add("estilo1");
+        document.body.classList.remove("estilo2");
+    }
+    function ReEstilizar2() {
+        document.body.classList.add("estilo2");
+        document.body.classList.remove("estilo1");
+    }
+    </script>
+    <style>
+        .estilo1 {
+            background-color: rgb(22, 22, 22);  
+            color: rgb(255, 255, 255);
+            font-family: Verdana;
+            margin-left: 25%;
+            margin-right: 15%;
+        }
+        .estilo1 .tituloprincipal{
+            text-align: center;
+            font-size: 50px;
+        }
+        .estilo1 .utilizeomen{
+            text-align: center;
+            font-size: 25px;
+        }
+        .menuabaixo ul {
+            list-style-type: disc;
+            }
+        .estilo1 .menuabaixo ul {
+            list-style-type: none;
+             padding: 0;            
+             margin: 0;      
+        }
+        .estilo1 .menuemsi{
+            position: sticky; /*Isso aqui em teoria fica grudado ao topo da tela e segue ela quando você vai pra baixo, mas eu não consegui esticar a página o bastante pra deixar aparente. */
+            top: 0;
+            padding: 10px;
+            font-size: 20px;
+            background-color: rgb(29, 29, 29);
+            text-align: center;
+            z-index: 1000;
+            margin-bottom: 60px;
+            border-radius: 15px;
+        }
+        .estilo1 .menuabaixo li {
+            padding: 10px 20px; 
+            background-color: rgb(20, 20, 20);
+            margin-bottom: 10px;
+            border-radius: 10px;
+            cursor: pointer; 
+            transition: background-color 0.3s;
+            font-weight: bold;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+        .estilo1 .menuabaixo li:hover {
+            background-color: rgb(112, 112, 112);
+        }
+        .estilo1 .mesmapagina {  
+            padding: 20px;
+            background-color: rgb(29, 29, 29);
+            border-radius: 15px;
+            margin-bottom: 60px;
+        }
+        .estilo1 .textodamesma {  
+            text-align: center;
+        }
+        .estilo1 .mesmapagina a:hover {
+            background-color: rgb(112, 112, 112);
+        }
+        .estilo1 .semestilo {
+            padding: 20px;
+            background-color: rgb(29, 29, 29);
+            border-radius: 15px;
+            margin-bottom: 60px;
+        }
+        .estilo1 .textodoestilo {
+            text-align: center;
+        }
+        .estilo1 .semestilo a:hover {
+            background-color: rgb(112, 112, 112);
+        }
+        .estilo1 .lado {  
+            width: 15%;
+            padding: 20px;
+            background-color: rgb(29, 29, 29);
+            border-radius: 15px;
+            position: fixed; 
+            left: 0; 
+            top: 0; 
+            height: 100%; 
+            text-align: center;
+        }
+        .estilo1 .lado h3{  
+            padding: 20px;
+            background-color: rgb(20, 20, 20);
+            border-radius: 15px;
+        }
+        .estilo1 .rodape {
+            text-align: center;
+            font-weight: bolder;
+        /* 
+        --------------------
+        Indicação de 
+        que aqui para 
+        baixo é o Estilo2 
+        --------------------
+        */
+        }
+        .estilo2 {
+            background-color: rgb(206, 109, 17);
+            color: white;
+            font-family:'helvetica';
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+        .estilo2 .menuabaixo ul {
+            list-style-type: none;
+             padding: 0;            
+             margin: 0;      
+        }
+        .estilo2 .tituloprincipal {
+            padding: 40px;
+            margin-bottom: 20px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(206, 109, 17);
+            font-size: 65px;
+            text-align: center;
+            font-weight: bolder;
+            border-radius: 15px;
+        }
+        .estilo2 .menumesma {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .estilo2 .menuemsi {
+            padding: 40px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(206, 109, 17);
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            width: 40%;
+            border-radius: 15px;
+        }
+        .estilo2 .menuabaixo li {
+            padding: 10px 20px; 
+            background-color: rgb(206, 109, 17);
+            margin-bottom: 10px;
+            border-radius: 10px;
+            cursor: pointer; 
+            transition: background-color 0.3s;
+            font-weight: bold;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: rgb(255, 255, 255);
+        }
+        .estilo2 .menuabaixo li:hover {
+            background-color: rgb(221, 154, 92)
+        }
+        .estilo2 .utilizeomen {
+            font-size: xx-large;
+            text-align: center;
+        }
+        .estilo2 .mesmapagina {
+            padding: 40px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(206, 109, 17);
+            font-weight: bold;
+            width: 40%;
+            text-align: center;
+            border-radius: 15px;
+        }
+        .estilo2 .mesmapagina a:hover {
+            background-color: rgb(221, 154, 92)
+        }
+        .estilo2 .textodamesma {
+            margin-bottom: 80px;
+        }
+        .estilo2 .mesmapagina .bagulho {
+            margin-top: 30px;
+            margin-bottom: 62px auto;
+        }
+        .estilo2 .mesmapagina a {
+            text-decoration: none;
+            background-color: rgb(206, 109, 17);
+            padding: 12px;
+            border-radius: 8px;
+            color: rgb(255, 255, 255);
+            margin: 10px;
+        }
+        .estilo2 .semestilo {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(206, 109, 17);
+            text-align: center;
+            font-weight: bold;
+            border-radius: 15px;
+        }
+        .estilo2 .semestilo h2 {
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+        .estilo2 .semestilo a:hover {
+            background-color: rgb(221, 154, 92)
+        }
+        .estilo2 .semestilo a {
+            text-decoration: none;
+            background-color: rgb(206, 109, 17);
+            padding: 12px;
+            border-radius: 8px;
+            color: rgb(255, 255, 255);
+        }
+        .estilo2 .bagulho2 {
+            margin-bottom: 30px;
+        }
+        .estilo2 .lado {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(206, 109, 17);
+            text-align: center;
+            font-weight: bold;
+            border-radius: 15px;
+        }
+        .estilo2 .lado h3 {
+            font-size: xx-large;
+            font-weight: bolder;
+            margin-bottom: 20px;
+        }
+        .estilo2 .rodape {
+            text-align: center;
+            font-weight: bolder;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="principal">
+    <h1 class="tituloprincipal">Bem-Vindo à Minha Página</h1>
+    <div class="menumesma">
+        <div class="menuemsi">
+             <p class="utilizeomen">Utilize o menu abaixo para selecionar variados tipos de estilos:</p>
+             <div class="menuabaixo">
+                  <ul>
+                     <li class="itemdomenunem" onclick="ReEstilizar0()">
+                     Sem Estilo
+                         </li>
+                     <li class="itemdomenu1" onclick="ReEstilizar1()">
+                        Estilo 1
+                        </li>
+                         <li class="itemdomenu2" onclick="ReEstilizar2()">
+                     Estilo 2
+                     </li> 
+                 </ul>
+             </div>
+         </div>
+    <div class="mesmapagina">
+        <h1 class="textodamesma">Mesma Página, Diferentes Estilos</h1>
+        <p>Essa é uma demonstração de como diferentes estilos de CSS podem afetar o layout dessa página quando você seleciona um dos seguintes links:
+        <div class="bagulho">
+        <br>
+        <a href="#" onclick="ReEstilizar1()">Estilo 1</a>
+        <a href="#" onclick="ReEstilizar2()">Estilo 2</a>
+        </div>
+        </p>
+    </div>
+    </div>
+    <div class="semestilo">
+        <h2 class="textodoestilo">Sem Estilo</h2>
+        <p>
+            Alternativamente, clique no seguinte link para ver como a página fica sem estilo nenhum:
+            <div class="bagulho2">
+            <br>
+            <a href="#" onclick="ReEstilizar0()">Sem Estilo</a>
+            </div>
+        </p>
+    </div>
+    <div class="lado">
+        <h3>Barra Lateral</h3>
+        <p> "O homem é um animal que deve ser amado." -Machado de Assis
+        </p>
+    </div>
+    <div class="rodape">
+        <p>Feito por Emmanuel Feiten de Souza para Instituto Evoluir, 28/10/2024</p>
+    </div>
+</div>
+</body>
+</html>
